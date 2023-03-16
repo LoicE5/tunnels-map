@@ -1,0 +1,17 @@
+# Global
+
+.DS_Store
+node_modules
+.env
+.env.*
+!.env.example
+
+# Front-End
+.svelte-kit
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+frontend/build
+frontend/package
+
+# Back-end
+server/build
