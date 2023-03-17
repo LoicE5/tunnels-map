@@ -1,0 +1,8 @@
+{
+    "server": "https://localhost:3200/",
+    "map": {
+        "default_coordinates": [50,21],
+        "tunnel_icon_path": "/tunnel_icon.png",
+        "default_zoom": 5
+    }
+}
