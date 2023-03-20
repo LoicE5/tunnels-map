@@ -6,6 +6,8 @@
 
     onMount(showMap)
 
+    fetch('/api').then(res=>res.text().then(txt=>console.log(txt)))
+
 </script>
 
 <style>

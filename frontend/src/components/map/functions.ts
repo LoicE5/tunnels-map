@@ -1,8 +1,9 @@
 import L from 'leaflet'
 import config from '../../config.json'
+import axios from 'axios'
 
-export function showMap():void {
-    const default_coords:Array<number> = config.map.default_coordinates
+export async function showMap() {
+    const default_coords: Array<number> = config.map.default_coordinates
     const default_zoom: number = config.map.default_zoom
     
     let lmap = L.map('map-container', { preferCanvas: true }).setView(default_coords, default_zoom)
@@ -12,7 +13,7 @@ export function showMap():void {
     createTunnelMarker(`<h1>Tunnel n° qqchose</h1><h2>Pologne</h2><button>bouton</button>`, config.map.default_coordinates, lmap)
 }
 
-export function createTunnelMarker(content:string, coords:Array<number>, map:any):void{
+export function createTunnelMarker(content:string, coords:Array<number>, map:any){
 
     const LeafIcon = L.Icon.extend({
         options: {
@@ -31,3 +32,7 @@ export function createTunnelMarker(content:string, coords:Array<number>, map:any
     .bindPopup(content)
 }
 
+export async function getTunnelsFromServer(auth: string = ''):Promise<object> {
+    const results = await axios.get(`${config.server}?auth=${auth}`)
+    return results
+}
