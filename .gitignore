@@ -15,3 +15,7 @@ frontend/package
 
 # Back-end
 server/build
+
+# Custom
+
+*.xmind

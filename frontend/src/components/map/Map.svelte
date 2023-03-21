@@ -3,10 +3,9 @@
     import 'leaflet/dist/leaflet.css'
     import {onMount} from 'svelte'
     import { showMap } from './functions'
+    import InvisibleContainer from './InvisibleContainer.svelte';
 
     onMount(showMap)
-
-    fetch('/api').then(res=>res.text().then(txt=>console.log(txt)))
 
 </script>
 
@@ -17,5 +16,7 @@
         position: fixed;
     }
 </style>
+
+<InvisibleContainer />
 
 <div id="map-container"></div>

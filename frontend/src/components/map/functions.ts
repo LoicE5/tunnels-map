@@ -1,38 +1,24 @@
-import L from 'leaflet'
+import L, { type LatLngExpression } from 'leaflet'
 import config from '../../config.json'
-import axios from 'axios'
+import Tunnel from './Tunnel'
 
 export async function showMap() {
-    const default_coords: Array<number> = config.map.default_coordinates
+    const default_coords: number[] = config.map.default_coordinates
     const default_zoom: number = config.map.default_zoom
     
-    let lmap = L.map('map-container', { preferCanvas: true }).setView(default_coords, default_zoom)
-    
+    let lmap = L.map('map-container', { preferCanvas: true }).setView(default_coords as LatLngExpression, default_zoom)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(lmap)
 
-    createTunnelMarker(`<h1>Tunnel n° qqchose</h1><h2>Pologne</h2><button>bouton</button>`, config.map.default_coordinates, lmap)
+    const tunnel = new Tunnel(
+        config.map.default_coordinates[0],
+        config.map.default_coordinates[1]
+    )
+
+    tunnel.render(lmap)
 }
 
-export function createTunnelMarker(content:string, coords:Array<number>, map:any){
-
-    const LeafIcon = L.Icon.extend({
-        options: {
-            iconSize:     [26, 20.5],
-            shadowSize:   [30, 40],
-            iconAnchor:   [0, 0],
-            shadowAnchor: [2, 42],
-            popupAnchor:  [0, 0]
-        }
-    });
-
-    const icon = new LeafIcon({iconUrl: config.map.tunnel_icon_path});
-
-    L.marker(coords, {icon: icon})
-    .addTo(map)
-    .bindPopup(content)
-}
-
-export async function getTunnelsFromServer(auth: string = ''):Promise<object> {
-    const results = await axios.get(`${config.server}?auth=${auth}`)
-    return results
+export async function getTunnelsFromServer(auth: string = ''):Promise<any> {
+    const results = await fetch(`/api?auth=${auth}`)
+    const data = await results.text()
+    return data
 }
