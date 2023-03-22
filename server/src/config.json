@@ -2,5 +2,12 @@
     "cors": {
         "origin": "*"
     },
-    "port": 3200
+    "port": 3200,
+    "database": {
+        "host"     : "localhost",
+        "user"     : "root",
+        "password" : "root",
+        "database" : "betuf_map",
+        "port": "/tmp/mysql.sock"
+    }
 }
