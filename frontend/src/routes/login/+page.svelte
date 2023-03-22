@@ -119,7 +119,7 @@
             submitLogin()
         }}
     >
-        <h1>Connect with your credentials</h1>
+        <h1>Connectez-vous à la carte Betuf</h1>
         <label for="username">Identifiant</label>
         <input type="text" name="username" id="username" placeholder={placeholder.username} bind:value={username} >
         <label for="password">Mot de passe</label>

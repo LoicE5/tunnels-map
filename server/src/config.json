@@ -9,5 +9,32 @@
         "password" : "root",
         "database" : "betuf_map",
         "port": "/tmp/mysql.sock"
+    },
+    "auth_level_access": {
+        "0": [
+            "name",
+            "latitude",
+            "longitude",
+            "date_built",
+            "length",
+            "city",
+            "province",
+            "country",
+            "number_of_lanes",
+            "width",
+            "height",
+            "max_speed"
+        ],
+        "1": [
+            "build_company",
+            "managing_company",
+            "materials",
+            "average_light",
+            "air_flow",
+            "date_last_revision",
+            "date_next_revision",
+            "average_traffic_density"
+        ],
+        "2": ["*"]
     }
 }

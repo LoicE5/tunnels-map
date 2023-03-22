@@ -5,10 +5,12 @@ import config from '../../config.json'
 export default class Tunnel {
     latitude: number
     longitude: number
+    data:Map
     
-    constructor(latitude: number, longitude: number) {
+    constructor(latitude: number, longitude: number, data:Map) {
         this.longitude = longitude
         this.latitude = latitude
+        this.data = data
     }
 
     render(map: Map) {
@@ -27,7 +29,10 @@ export default class Tunnel {
         
         const popup:string = new MarkerPopup({
             target: document.body.querySelector('#invisible-container'),
-            accessors: true
+            accessors: true,
+            props: {
+                data: this.data
+            }
         } as any).getHTML()
     
         L.marker([this.latitude, this.longitude] as LatLngExpression, {icon: icon})

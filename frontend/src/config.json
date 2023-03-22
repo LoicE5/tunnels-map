@@ -4,5 +4,26 @@
         "default_coordinates": [50,21],
         "tunnel_icon_path": "/tunnel_icon.png",
         "default_zoom": 5
+    },
+    "tunnels_data_mapping": {
+        "name": "Nom",
+        "date_built": "Date de construction",
+        "build_company": "Entreprise responsable de l'ouvrage",
+        "managing_company": "Entreprise responsable de l'exploitation",
+        "materials": "Matériaux",
+        "length": "Longueur",
+        "city": "Ville",
+        "province": "Département / Province",
+        "country": "Pays",
+        "average_light": "Luminosité moyenne (lumens)",
+        "air_flow": "Flux d'air moyen (CFM)",
+        "number_of_lanes": "Nombre de voies",
+        "width": "Longueur",
+        "height": "Largeur",
+        "max_speed": "Vitesse maximale (km/h)",
+        "date_last_revision": "Date de dernière révision",
+        "date_next_revision": "Date de prochaine révision",
+        "critical": "État critique",
+        "average_traffic_density": "Densité de traffic moyenne (véhicules/heure)"
     }
 }
