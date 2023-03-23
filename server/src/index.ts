@@ -67,7 +67,7 @@ app.post("/logout", async (req: Request | any, res: Response) => {
 
 app.post("/tunnels", async (req: Request | any, res: Response) => {
     const session_id = req.body.session_id || null
-    let auth_level: number
+    let auth_level:number
     let user_company:string
 
     if (!session_id) {
