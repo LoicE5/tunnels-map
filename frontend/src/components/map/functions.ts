@@ -19,8 +19,6 @@ export async function showMap() {
         let tunnelFR:Map = new Map()
         const mapping = config.tunnels_data_mapping
 
-        console.log(mapping)
-
         // @ts-ignore
         for (const english in mapping) {
             const french = mapping[english]
@@ -28,8 +26,6 @@ export async function showMap() {
 
             if (value || value == 0) tunnelFR.set(french, value)
         }
-
-        console.log(tunnelFR)
 
         const tunnelObj = new Tunnel(
             tunnel.latitude,
@@ -39,11 +35,6 @@ export async function showMap() {
     
         tunnelObj.render(lmap)
     }
-
-    console.log(tunnels)
-
-
-
 
 }
 

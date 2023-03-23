@@ -23,7 +23,7 @@
         const data = response.data
 
         if(!data.success){
-            console.log(data.message)
+            console.error(data.message)
             return
         }
 

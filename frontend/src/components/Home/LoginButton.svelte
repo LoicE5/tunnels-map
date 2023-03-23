@@ -22,7 +22,7 @@
         const data = response.data
 
         if(!data.success) {
-            console.log('Logout failed.', data.message)
+            console.error('Logout failed.', data.message)
             return
         }
 

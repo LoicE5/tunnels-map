@@ -86,9 +86,7 @@ app.post("/tunnels", async (req: Request | any, res: Response) => {
 
     const tunnels = await db.query(`select ${to_select} from tunnels`)
     
-    console.log(tunnels)
-
     res.json(tunnels)
 })
 
-app.listen(config.port, ()=>console.log(`The server is running and listening on port ${config.port}`))
+app.listen(config.port, ()=>console.info(`The server is running and listening on port ${config.port}`))
