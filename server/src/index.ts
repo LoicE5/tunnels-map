@@ -5,6 +5,7 @@ import app from './express_setup.js'
 import db from './database.js'
 // @ts-ignore
 import { randomstring } from './functions.js'
+import bcrypt from 'bcrypt'
 
 app.get("/", async (req: Request, res: Response) => {
     res.send("The server is working fine :-)")
@@ -15,11 +16,23 @@ app.post("/login", async (req: Request|any, res: Response) => {
     const password:string = req.body.password
     
     if (username && password) {
-        const results: any[] = await db.query(`select * from users where username = '${username}' and password = '${password}'`)
+        const results: any[] = await db.query(`select * from users where username = '${username}'`)
         
-        const session_id:string = randomstring(64)
 
         if (results.length > 0) {
+
+            const session_id: string = randomstring(64)
+            
+            const encryptedPassword = results[0].password
+
+            if (!await bcrypt.compare(password, encryptedPassword)) {
+                res.json({
+                    success: false,
+                    message: "Incorrect username or password !"
+                })
+                return
+            }
+
             await db.query(`insert into sessions (user_id, auth) values (${results[0].user_id}, '${session_id}')`)
 
             res.json({

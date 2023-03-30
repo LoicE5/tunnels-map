@@ -24,6 +24,7 @@
 
         if(!data.success){
             console.error(data.message)
+            alert(data.message)
             return
         }
 

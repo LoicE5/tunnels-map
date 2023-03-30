@@ -27,6 +27,7 @@ export default class Tunnel {
         // @ts-ignore
         const icon = new LeafIcon({ iconUrl: config.map.tunnel_icon_path });
         
+        // @ts-ignore
         const popup:string = new MarkerPopup({
             target: document.body.querySelector('#invisible-container'),
             accessors: true,

@@ -23,6 +23,7 @@
 
         if(!data.success) {
             console.error('Logout failed.', data.message)
+            alert('Logout failed. '+data.message)
             return
         }
 
