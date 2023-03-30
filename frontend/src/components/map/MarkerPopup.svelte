@@ -2,8 +2,6 @@
 <script>
     import { onMount } from "svelte";
 
-
-
     let element;
     export function getHTML(){
         return element.outerHTML
