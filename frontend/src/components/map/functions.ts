@@ -15,6 +15,8 @@ export async function showMap() {
     const tunnels = await getTunnelsFromServer()
 
     for (const tunnel of tunnels) {
+
+        console.log(tunnel)
         // @ts-ignore
         let tunnelFR:Map = new Map()
         const mapping = config.tunnels_data_mapping
@@ -30,7 +32,8 @@ export async function showMap() {
         const tunnelObj = new Tunnel(
             tunnel.latitude,
             tunnel.longitude,
-            tunnelFR
+            tunnelFR,
+            tunnel.owned_tunnel || false
         )
     
         tunnelObj.render(lmap)

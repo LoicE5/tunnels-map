@@ -4,6 +4,7 @@
     import {onMount} from 'svelte'
     import { showMap } from './functions'
     import InvisibleContainer from './InvisibleContainer.svelte';
+    import HideTunnels from './HideTunnels.svelte';
 
     onMount(showMap)
 
@@ -16,6 +17,8 @@
         position: fixed;
     }
 </style>
+
+<HideTunnels />
 
 <InvisibleContainer />
 

@@ -12,6 +12,7 @@
     },
     "auth_level_access": {
         "0": [
+            "tunnel_id",
             "name",
             "latitude",
             "longitude",

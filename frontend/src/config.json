@@ -3,6 +3,7 @@
     "map": {
         "default_coordinates": [50,21],
         "tunnel_icon_path": "/tunnel_icon.png",
+        "owned_tunnel_icon_path": "/tunnel_icon_owned.png",
         "default_zoom": 5
     },
     "tunnels_data_mapping": {

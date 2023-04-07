@@ -8,6 +8,7 @@
     }
 
     export let data
+    export let owned_tunnel
 
 </script>
 
@@ -22,7 +23,7 @@
     }
 </style>
 
-<div bind:this={element}>
+<div bind:this={element} data-owned-tunnel={owned_tunnel}>
     {#each [...data.entries()] as tunnel}
         {#if tunnel[0] == "Nom"}
             <h1>{tunnel[1]}</h1>
