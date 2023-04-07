@@ -18,7 +18,9 @@
     }
 </style>
 
-<HideTunnels />
+{#if window.sessionStorage.getItem('session_id')}
+    <HideTunnels />
+{/if}
 
 <InvisibleContainer />
 
