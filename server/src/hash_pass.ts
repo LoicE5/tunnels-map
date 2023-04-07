@@ -13,11 +13,3 @@ for (const password of passwords) {
         console.log(`${password} -> ${hash}`)
     })
 }
-
-
-(async () => {
-    const pass = "abcd"
-    const hash = await bcrypt.hash(pass, 10)
-    
-    console.log(await bcrypt.compare(pass, hash))
-})()
