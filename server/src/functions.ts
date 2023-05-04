@@ -11,3 +11,27 @@ export function randomstring(length:number):string {
     }
     return result;
 }
+
+export function randomInt(min: number, max: number, odd: boolean = false, even: boolean = false): number{
+    let result = Math.floor((Math.random() * (max + 1 - min)) + min)
+
+    if (odd) {
+
+        while (result % 2 != 0) {
+            result = Math.floor((Math.random() * (max+1-min)) + min)
+        }
+
+    } else if (even) {
+        
+        while (result % 2 == 0) {
+            result = Math.floor((Math.random() * (max+1-min)) + min)
+        }
+
+    }
+
+    return result
+}
+
+export function generateSqlDate(year: number, month: number, day: number): string {
+    return `STR_TO_DATE('${year}-${month}-${day}', '%Y-%m-%d')`
+}

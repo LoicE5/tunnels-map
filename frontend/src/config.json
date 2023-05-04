@@ -25,6 +25,24 @@
         "date_last_revision": "Date de dernière révision",
         "date_next_revision": "Date de prochaine révision",
         "critical": "État critique",
-        "average_traffic_density": "Densité de traffic moyenne (véhicules/heure)"
+        "average_traffic_density": "Densité de traffic moyenne (véhicules/heure)",
+        "road": "Route",
+        "lended": "Concédé",
+        "tube1_opening_year": "Année d'ouverture - Tube 1",
+        "tube2_opening_year": "Année d'ouverture - Tube 2",
+        "tube1_length": "Longueur du Tube 1 (mètres)",
+        "tube2_length": "Longueur du Tube 2 (mètres)",
+        "general": "Dernière visite - général",
+        "general_next": "Prochaine visite - général",
+        "elec": "Dernière visite - Alimentation électrique",
+        "elec_next": "Prochaine visite - Alimentation électrique",
+        "water": "Dernière visite - Réseau d'eau et assainissement",
+        "water_next": "Prochaine visite - Réseau d'eau et assainissement",
+        "light": "Dernière visite - Éclairage",
+        "light_next": "Prochaine visite - Éclairage",
+        "vent": "Dernière visite - Ventilation",
+        "vent_next": "Prochaine visite - Ventilation",
+        "safety": "Dernière visite - Sécurité",
+        "safety_next": "Prochaine visite - Sécurité"
     }
 }

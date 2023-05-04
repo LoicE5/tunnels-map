@@ -11,15 +11,16 @@
     async function removeNonOwnedTunnels(){
         const tunnelsToRemove = document.querySelectorAll(`img[src="${config.map.tunnel_icon_path}"]`)
 
-        for(let tunnel of tunnelsToRemove){
-            if(!b){
+        if(!b){
+            for(let tunnel of tunnelsToRemove){
                 tunnel.style.visibility = "hidden"
-                b = true
-            } 
-            else {
-                tunnel.style.visibility = "visible"
-                b = false
             }
+            b = true
+        } else {
+            for(let tunnel of tunnelsToRemove){
+                tunnel.style.visibility = "visible"
+            }
+            b = false
         }
 
     }

@@ -16,15 +16,18 @@
             "name",
             "latitude",
             "longitude",
-            "date_built",
-            "length",
+            "road",
             "city",
             "province",
             "country",
             "number_of_lanes",
             "width",
             "height",
-            "max_speed"
+            "max_speed",
+            "tube1_opening_year",
+            "tube2_opening_year",
+            "tube1_length",
+            "tube2_length"
         ],
         "1": [
             "build_company",
@@ -34,7 +37,8 @@
             "air_flow",
             "date_last_revision",
             "date_next_revision",
-            "average_traffic_density"
+            "average_traffic_density",
+            "lended"
         ],
         "2": ["*"]
     }

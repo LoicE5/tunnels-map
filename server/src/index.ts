@@ -100,8 +100,8 @@ app.post("/tunnels", async (req: Request | any, res: Response) => {
         if(auth_level >= 2) return "*"
     })()
 
-    const owned_tunnels = await db.query(`select * from tunnels where owner_user_id = ${user_id}`)
-    const other_tunnels = await db.query(`select ${to_select_other_tunnels} from tunnels`)
+    const owned_tunnels = await db.query(`select * from tunnels join themes on tunnels.tunnel_id = themes.tunnel_id where tunnels.owner_user_id = ${user_id}`)
+    const other_tunnels = auth_level >= 2 ? await db.query(`select ${to_select_other_tunnels} from tunnels join themes on tunnels.tunnel_id = themes.tunnel_id`) : await db.query(`select ${to_select_other_tunnels} from tunnels`)
 
     const tunnels = (() => {
         let result:any[] = []

@@ -10,6 +10,6 @@ if (!passwords || passwords.length <= 0) {
 
 for (const password of passwords) {
     bcrypt.hash(password, 10).then((hash: string) => {
-        console.log(`${password} -> ${hash}`)
+        console.info(`${password} -> ${hash}`)
     })
 }

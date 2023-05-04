@@ -16,7 +16,6 @@ export async function showMap() {
 
     for (const tunnel of tunnels) {
 
-        console.log(tunnel)
         // @ts-ignore
         let tunnelFR:Map = new Map()
         const mapping = config.tunnels_data_mapping

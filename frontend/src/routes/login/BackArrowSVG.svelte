@@ -1,6 +1,8 @@
 <script>
+    import { redirect } from "../../utils/functions";
+
     function goBackHome(){
-        window.location.href = "/"
+        redirect('/')
     }
 </script>
 

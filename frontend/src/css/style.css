@@ -11,3 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+.leaflet-control-attribution.leaflet-control {
+    display: none;
+}
