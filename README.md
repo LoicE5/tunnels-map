@@ -13,6 +13,8 @@ The project's language is French 🇫🇷.
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
+[Leaflet](https://github.com/Leaflet/Leaflet) is used for the map.
+
 ## How to start
 
 ### Development
