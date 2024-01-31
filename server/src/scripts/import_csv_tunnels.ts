@@ -54,7 +54,7 @@ const companies = [
     'SMTPC'
 ] as string[]
 
-const path = '/Users/loic/CloudStation/Cours/Master MIAGE 1ère année/💻 Systèmes d’information avancés/Betuf/tunnels_to_import.csv'
+const path = './tunnels_to_import.csv'
 
 const data = csvToJson(path)
 
